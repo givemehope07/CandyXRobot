@@ -92,8 +92,8 @@ def fallen(update: Update, context: CallbackContext):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="ᴇɴᴀʙʟᴇ", callback_data="add_chat({})"),
-                InlineKeyboardButton(text="ᴅɪsᴀʙʟᴇ", callback_data="rm_chat({})"),
+                InlineKeyboardButton(text="𝐄ɴᴀʙʟᴇ", callback_data="add_chat({})"),
+                InlineKeyboardButton(text="𝐃ɪsᴀʙʟᴇ", callback_data="rm_chat({})"),
             ],
         ]
     )
@@ -138,12 +138,12 @@ def chatbot(update: Update, context: CallbackContext):
 
 
 __help__ = f"""
-*{BOT_NAME} has an chatbot which provides you a seemingless chatting experience :**
+*{BOT_NAME} has an in-built chatbot which provides you a seemingless chatting experience :**
 
- »  /chatbot *:* Shows chatbot control panel
+ ➥  /chatbot *:* Shows chatbot control panel
 """
 
-__mod_name__ = "Cʜᴀᴛʙᴏᴛ"
+__mod_name__ = "𝐂ʜᴀᴛʙᴏᴛ"
 
 
 CHATBOTK_HANDLER = CommandHandler("chatbot", fallen, run_async=True)
