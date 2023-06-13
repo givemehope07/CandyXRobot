@@ -40,7 +40,7 @@ async def couple(_, message):
         is_selected = await get_couple(chat_id, today)
         if not is_selected:
             list_of_users = []
-            async for i in pbot.get_chat_members(message.chat.id, limit=50):
+            async for i in pbot.get_chat_members(message.chat.id, limit=40):
                 if not i.user.is_bot:
                     list_of_users.append(i.user.id)
             if len(list_of_users) < 2:
@@ -54,7 +54,7 @@ async def couple(_, message):
 
             couple_selection_message = f"""**Couple of the day :**
 
-{c1_mention} + {c2_mention} = 😘
+{c1_mention} + {c2_mention} = 💗
 __New couple of the day can be chosen at 12AM {tomorrow}__"""
             await pbot.send_message(message.chat.id, text=couple_selection_message)
             couple = {"c1_id": c1_id, "c2_id": c2_id}
@@ -67,7 +67,7 @@ __New couple of the day can be chosen at 12AM {tomorrow}__"""
             c2_name = (await pbot.get_users(c2_id)).mention
             couple_selection_message = f"""Couple of the day :
 
-{c1_name} + {c2_name} = 😘
+{c1_name} + {c2_name} = 💗
 __New couple of the day can be chosen at 12AM {tomorrow}__"""
             await pbot.send_message(message.chat.id, text=couple_selection_message)
     except Exception as e:
@@ -78,7 +78,7 @@ __New couple of the day can be chosen at 12AM {tomorrow}__"""
 __help__ = """
 Choose couples in your chat
 
- ❍ /couple *:* Choose 2 users and send their name as couples in your chat.
+ ❉ /couple *:* Choose 2 users and send their name as couples in your chat.
 """
 
-__mod_name__ = "Cᴏᴜᴘʟᴇ"
+__mod_name__ = "𝐂ᴏᴜᴘʟᴇ"
