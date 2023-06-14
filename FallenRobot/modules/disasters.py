@@ -571,42 +571,42 @@ Group admins/owners do not need these commands.
  ❉ /unload modulename*:* Loads the said module from memory without restarting memory without restarting the bot 
 
 *Remote commands:*
- ❍ /rban*:* user group*:* Remote ban
- ❍ /runban*:* user group*:* Remote un-ban
- ❍ /rpunch*:* user group*:* Remote punch
- ❍ /rmute*:* user group*:* Remote mute
- ❍ /runmute*:* user group*:* Remote un-mute
+ ❉ /rban*:* user group*:* Remote ban
+ ❉ /runban*:* user group*:* Remote un-ban
+ ❉ /rpunch*:* user group*:* Remote punch
+ ❉ /rmute*:* user group*:* Remote mute
+ ❉ /runmute*:* user group*:* Remote un-mute
 
 *Windows self hosted only:*
- ❍ /reboot*:* Restarts the bots service
- ❍ /gitpull*:* Pulls the repo and then restarts the bots service
+ ❉ /reboot*:* Restarts the bots service
+ ❉ /gitpull*:* Pulls the repo and then restarts the bots service
  
 *Debugging and Shell:* 
- ❍ /debug <on/off>*:* Logs commands to updates.txt
- ❍ /logs*:* Run this in support group to get logs in pm
- ❍ /eval*:* Self explanatory
- ❍ /sh*:* Runs shell command
- ❍ /shell*:* Runs shell command
- ❍ /clearlocals*:* As the name goes
- ❍ /dbcleanup*:* Removes deleted accs and groups from db
- ❍ /py*:* Runs python code
+ ❉ /debug <on/off>*:* Logs commands to updates.txt
+ ❉ /logs*:* Run this in support group to get logs in pm
+ ❉ /eval*:* Self explanatory
+ ❉ /sh*:* Runs shell command
+ ❉ /shell*:* Runs shell command
+ ❉ /clearlocals*:* As the name goes
+ ❉ /dbcleanup*:* Removes deleted accs and groups from db
+ ❉ /py*:* Runs python code
  
 *Global Bans:*
- ❍ /gban <id> <reason>*:* Gbans the user, works by reply too
- ❍ /ungban*:* Ungbans the user, same usage as gban
- ❍ /gbanlist*:* Outputs a list of gbanned users
+ ❉ /gban <id> <reason>*:* Gbans the user, works by reply too
+ ❉ /ungban*:* Ungbans the user, same usage as gban
+ ❉ /gbanlist*:* Outputs a list of gbanned users
 
 *Global Blue Text*
- ❍ /gignoreblue*:* <word>*:* Globally ignore bluetext cleaning of saved word across Anonymous Robot.
- ❍ /ungignoreblue*:* <word>*:* Remove said command from global cleaning list
+ ❉ /gignoreblue*:* <word>*:* Globally ignore bluetext cleaning of saved word across Anonymous Robot.
+ ❉ /ungignoreblue*:* <word>*:* Remove said command from global cleaning list
 
 *Heroku Settings*
 *Owner only*
- ❍ /usage*:* Check your heroku dyno hours remaining.
- ❍ /see var <var>*:* Get your existing varibles, use it only on your private group!
- ❍ /set var <newvar> <vavariable>*:* Add new variable or update existing value variable.
- ❍ /del var <var>*:* Delete existing variable.
- ❍ /logs Get heroku dyno logs.
+ ❉ /usage*:* Check your heroku dyno hours remaining.
+ ❉ /see var <var>*:* Get your existing varibles, use it only on your private group!
+ ❉ /set var <newvar> <vavariable>*:* Add new variable or update existing value variable.
+ ❉ /del var <var>*:* Delete existing variable.
+ ❉ /logs Get heroku dyno logs.
 
 `⚠️ Read from top`
 Visit @{SUPPORT_CHAT} for more information.
@@ -648,7 +648,7 @@ dispatcher.add_handler(SUPPORTLIST_HANDLER)
 dispatcher.add_handler(SUDOLIST_HANDLER)
 dispatcher.add_handler(DEVLIST_HANDLER)
 
-__mod_name__ = "Dᴇᴠs"
+__mod_name__ = "𝐃ᴇᴠs"
 __handlers__ = [
     SUDO_HANDLER,
     SUPPORT_HANDLER,
