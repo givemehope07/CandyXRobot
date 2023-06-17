@@ -166,7 +166,7 @@ def lock(update, context) -> str:
                     if update.effective_message.chat.type == "private":
                         send_message(
                             update.effective_message,
-                            "This command is meant to use in group not in PM",
+                            "WTF noob, This command is meant to use in group not in PM",
                         )
                         return ""
                     chat = update.effective_chat
@@ -270,7 +270,7 @@ def unlock(update, context) -> str:
                     if update.effective_message.chat.type == "private":
                         send_message(
                             update.effective_message,
-                            "This command is meant to use in group not in PM",
+                            "WTF Noob, This command is meant to use in group not in PM",
                         )
                         return ""
                     chat = update.effective_chat
@@ -302,7 +302,7 @@ def unlock(update, context) -> str:
                     if update.effective_message.chat.type == "private":
                         send_message(
                             update.effective_message,
-                            "This command is meant to use in group not in PM",
+                            "WTF Noob, This command is meant to use in group not in PM",
                         )
                         return ""
                     chat = update.effective_chat
@@ -429,7 +429,7 @@ def del_lockables(update, context):
                         chat.kick_member(new_mem.id)
                         send_message(
                             update.effective_message,
-                            "Only admins are allowed to add bots in this chat! Get outta here.",
+                            "Only admins are allowed to add bots in this chat! Get outta here you fu*ker.",
                         )
                         break
             else:
@@ -562,12 +562,12 @@ You're in the right place!
 The locks module allows you to lock away some common items in the \
 telegram world; the bot will automatically delete them!
 
- ❍ /locktypes*:* Lists all possible locktypes
+ ❉ /locktypes*:* Lists all possible locktypes
  
 *Admins only:*
- ❍ /lock <type>*:* Lock items of a certain type (not available in private)
- ❍ /unlock <type>*:* Unlock items of a certain type (not available in private)
- ❍ /locks*:* The current list of locks in this chat.
+ ❉ /lock <type>*:* Lock items of a certain type (not available in private)
+ ❉ /unlock <type>*:* Unlock items of a certain type (not available in private)
+ ❉ /locks*:* The current list of locks in this chat.
  
 Locks can be used to restrict a group's users.
 eg:
@@ -580,7 +580,7 @@ Locking bots will stop non-admins from adding bots to the chat.
  • Unlocking permission *pin* will allow members (non-admins) to pin a message in a group
 """
 
-__mod_name__ = "Lᴏᴄᴋs"
+__mod_name__ = "𝐋ᴏᴄᴋs"
 
 LOCKTYPES_HANDLER = DisableAbleCommandHandler("locktypes", locktypes, run_async=True)
 LOCK_HANDLER = CommandHandler(
