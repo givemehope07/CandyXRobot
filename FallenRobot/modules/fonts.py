@@ -43,7 +43,7 @@ async def style_buttons(c, m, cb=False):
             InlineKeyboardButton("H̆̈ă̈p̆̈p̆̈y̆̈", callback_data="style+happy"),
             InlineKeyboardButton("S̑̈ȃ̈d̑̈", callback_data="style+sad"),
         ],
-        [InlineKeyboardButton("ɴᴇxᴛ ➻", callback_data="nxt")],
+        [InlineKeyboardButton("➻", callback_data="nxt")],
     ]
     if not cb:
         await m.reply_text(
@@ -195,7 +195,7 @@ async def style(c, m):
 
 
 __help__ = """
- ❍ /font <text> *:* ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ.
+ ❉ /font <text> *:* ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ.
  """
 
-__mod_name__ = "Fᴏɴᴛ Eᴅɪᴛᴏʀ"
+__mod_name__ = "𝐅ᴏɴᴛ 𝐄ᴅɪᴛᴏʀ"
