@@ -1,7 +1,7 @@
 RUN_STRINGS = (
     "Now you see me, now you don't." "ε=ε=ε=ε=┌(;￣▽￣)┘",
     "Get back here!",
-    "REEEEEEEEEEEEEEEEEE!!!!!!!",
+    "Yk what, My owner is a very crazy guy. He made me just to see you mfs",
     "Look out for the wall!",
     "Don't leave me alone with them!!",
     "You've got company!",
@@ -30,7 +30,7 @@ SLAP_FALLEN_TEMPLATES = (
     "Stop slapping me. REEEEEEEEEEEEEE.",
     [
         "I am muting you for a minute.",  # normal reply
-        "Stop slapping me just because I can't mute you. REEEEEEEEEE.",  # reply to admin
+        "Stop slapping me just because I can't mute you.",  # reply to admin
         "tmute",  # command
         "Shut up!",
         "Silence!",
@@ -38,7 +38,7 @@ SLAP_FALLEN_TEMPLATES = (
 )
 
 SLAP_TEMPLATES = (
-    "{user2} was killed by magic.",
+    "{user2} was killed by magic powers of Devansh.",
     "{user2} starved without pats.",
     "{user2} was knocked into the void by {user1}.",
     "{user2} fainted.",
@@ -192,7 +192,7 @@ PAT_STICKERS = (
     "CAACAgQAAxkBAALRXF9Xs6XmIeDbnoL1wiDky0TdX-CvAAKKAQAC1TMzC9A3CtiT2rqVGwQ",
 )
 
-PING_STRING = ("ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ! 🖤",)
+PING_STRING = ("ɪ ᴀᴍ ᴀʟɪᴠᴇ ᴋɪᴅ ! 🖤",)
 
 ITEMS = (
     "cast iron skillet",
@@ -433,7 +433,7 @@ EIGHTBALL = [
     "🟢 You may rely on it.",
 ]
 
-DECIDE = ("Yes.", "No.", "Maybe.")
+DECIDE = ("Yes.", "No.", "Ask Devansh.")
 
 TABLE = (
     "(╯°□°）╯彡 ┻━┻",
