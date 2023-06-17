@@ -14,9 +14,7 @@ LOGO_LINKS = [
     "https://telegra.ph/file/c1ff2d5ec5e1b5bd1b200.jpg",
     "https://telegra.ph/file/08c5fbe14cc4b13d1de05.jpg",
     "https://telegra.ph/file/66614a049d74fe2a220dc.jpg",
-    "https://telegra.ph/file/9cc1e4b24bfa13873bd66.jpg",
     "https://telegra.ph/file/792d38bd74b0c3165c11d.jpg",
-    "https://telegra.ph/file/e1031e28a4aa4d8bd7c9b.jpg",
     "https://telegra.ph/file/2be9027c55b5ed463fc18.jpg",
     "https://telegra.ph/file/9fd71f8d08158d0cc393c.jpg",
     "https://telegra.ph/file/627105074f0456f42058b.jpg",
@@ -58,6 +56,7 @@ LOGO_LINKS = [
     "https://telegra.ph/file/d64be0a98f441a33d2aef.jpg",
     "https://telegra.ph/file/e2c59ac97a900bab5ad7d.jpg",
     "https://telegra.ph/file/41baf461b0a34f1a881a9.jpg",
+    "https://telegra.ph/file/de4d672e14fd49be6f83d.jpg",
     "https://telegra.ph/file/8d4082052b4bd0a8cc862.jpg",
     "https://telegra.ph/file/e7d6e0c511137ad67d843.jpg",
     "https://telegra.ph/file/d7b97ea806d4a905b71c4.jpg",
@@ -247,10 +246,10 @@ async def lego(event):
     quew = event.pattern_match.group(1)
     if event.sender_id != OWNER_ID and not quew:
         await event.reply(
-            "ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ !\nExample : `/logo <ANONYMOUS>`"
+            "ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ !\nExample : `/logo <DEVANSH>`"
         )
         return
-    pesan = await event.reply("**ᴄʀᴇᴀᴛɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ ʟᴏɢᴏ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ᴀ sᴇᴄ...**")
+    pesan = await event.reply("**ᴄʀᴇᴀᴛɪɴɢ ʏᴏᴜʀ ʟᴏɢᴏ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ʙᴀʙᴇ...**")
     try:
         text = event.pattern_match.group(1)
         randc = random.choice(LOGO_LINKS)
@@ -272,9 +271,9 @@ async def lego(event):
         x = (image_widthz - w) / 2
         y = (image_heightz - h) / 2 + 6
         draw.text(
-            (x, y), text, font=font, fill="white", stroke_width=1, stroke_fill="black"
+            (x, y), text, font=font, fill="red", stroke_width=1, stroke_fill="black"
         )
-        fname = "fallen.png"
+        fname = "candy.png"
         img.save(fname, "png")
         await telethn.send_file(
             event.chat_id,
@@ -305,7 +304,7 @@ async def lego(event):
         x = (image_widthz - w) / 2
         y = (image_heightz - h) / 2 + 6
         draw.text(
-            (x, y), text, font=font, fill="white", stroke_width=1, stroke_fill="black"
+            (x, y), text, font=font, fill="red", stroke_width=1, stroke_fill="black"
         )
         fname = "fallen.png"
         img.save(fname, "png")
@@ -319,10 +318,10 @@ async def lego(event):
             os.remove(fname)
 
 
-__mod_name__ = "Lᴏɢᴏ"
+__mod_name__ = "𝐋ᴏɢᴏ"
 
 __help__ = """
 I can create some beautiful and attractive logo for your profile pics.
 
-❍ /logo <text>*:* Create a logo of your given text with random view.
+❉ /logo <text>*:* Create a logo of your given text with random view.
 """
