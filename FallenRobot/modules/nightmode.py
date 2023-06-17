@@ -66,7 +66,7 @@ openhehe = ChatBannedRights(
 async def close_ws(event):
     if event.is_group:
         if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-            await event.reply("🤦🏻‍♂️You are not admin so you can't use this command...")
+            await event.reply("Lul, You are not admin so you can't use this command...")
             return
 
     if not event.is_group:
@@ -85,7 +85,7 @@ async def close_ws(event):
 async def disable_ws(event):
     if event.is_group:
         if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-            await event.reply("🤦🏻‍♂️You are not admin so you can't use this command...")
+            await event.reply("Lul, You are not admin so you can't use this command...")
             return
 
     if not event.is_group:
@@ -152,10 +152,10 @@ scheduler.start()
 __help__ = """
 *Admins Only*
 
-❍ /nightmode*:* Adds Group to NightMode Chats
- ❍ /rmnight*:* Removes Group From NightMode Chats
+❉ /nightmode*:* Adds Group to NightMode Chats
+❉ /rmnight*:* Removes Group From NightMode Chats
 
 *Note:* Night Mode chats get Automatically closed at 12 am(IST) and Automatically openned at 6 am(IST) to Prevent Night Spams.
 """
 
-__mod_name__ = "Nɪɢʜᴛ"
+__mod_name__ = "𝐍ɪɢʜᴛ"
