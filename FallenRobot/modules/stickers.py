@@ -132,7 +132,7 @@ def kang(update: Update, context: CallbackContext):
         elif msg.reply_to_message.sticker and msg.reply_to_message.sticker.emoji:
             sticker_emoji = msg.reply_to_message.sticker.emoji
         else:
-            sticker_emoji = "🤔"
+            sticker_emoji = "🍁"
 
         if not is_animated:
             try:
@@ -278,7 +278,7 @@ def kang(update: Update, context: CallbackContext):
                 png_sticker = urlemoji[1]
                 sticker_emoji = urlemoji[2]
             except IndexError:
-                sticker_emoji = "🤔"
+                sticker_emoji = "🍁"
             urllib.urlretrieve(png_sticker, kangsticker)
             im = Image.open(kangsticker)
             maxsize = (512, 512)
@@ -452,10 +452,10 @@ def makepack_internal(
 
 
 __help__ = """
- ❍ /stickerid*:* reply to a sticker to me to tell you its file ID.
- ❍ /getsticker*:* reply to a sticker to me to upload its raw PNG file.
- ❍ /kang*:* reply to a sticker to add it to your pack.
- ❍ /stickers*:* Find stickers for given term on combot sticker catalogue
+ ❉ /stickerid*:* reply to a sticker to me to tell you its file ID.
+ ❉ /getsticker*:* reply to a sticker to me to upload its raw PNG file.
+ ❉ /kang*:* reply to a sticker to add it to your pack.
+ ❉ /stickers*:* Find stickers for given term on combot sticker catalogue
 """
 
 __mod_name__ = "Sᴛɪᴄᴋᴇʀ"
