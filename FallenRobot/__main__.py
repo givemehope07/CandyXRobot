@@ -907,7 +907,7 @@ def main():
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(settings_callback_handler)
     dispatcher.add_handler(migrate_handler)
-
+    dispatcher.add_handler(Music_callback_handler)
     dispatcher.add_error_handler(error_callback)
 
     LOGGER.info("Using long polling.")
