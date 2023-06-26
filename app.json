@@ -1,7 +1,7 @@
 {
-      "name": "Fallen Robot",
+      "name": "Candy Robot",
       "description": "Telegram Group Management Bot.",
-      "logo": "https://te.legra.ph/file/72e135da30a1a349f2844.jpg",
+      "logo": "https://te.legra.ph/file/6084920fbc4982c8e800b.jpg",
       "keywords": [
          "telegram",
          "modular",
@@ -9,7 +9,7 @@
          "manager",
          "Fallen"
       ],   
-   "repository": "https://github.com/AnonymousX1025/FallenRobot",
+   "repository": "https://github.com/Devansh-Bots/CandyXRobot",
    "stack": "heroku-22",
    "addons": [
       {
@@ -61,7 +61,7 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "1356469075"
+         "value": "5616727536"
       },
       "START_IMG": {
          "description": "Telegraph link of the image which will be shown at start command.",
