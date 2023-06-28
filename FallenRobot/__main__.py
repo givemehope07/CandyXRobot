@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 *ʜᴇʏ* {}, 🎄
 
-*๏ ᴛʜɪs ɪs* {} !
+*• ᴛʜɪs ɪs* {} !
 ➻ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
 
 ──────────────────
@@ -89,18 +89,15 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="Hᴇʟᴘ Sᴇᴄᴛɪᴏɴ", callback_data="help_back"),
+        InlineKeyboardButton(text="𝐌ᴀɴᴀɢᴇᴍᴇɴᴛ", callback_data="help_back"),
+        InlineKeyboardButton(text="𝐌ᴜsɪᴄ ♪", callback_data="Music_"),
     ],
     [
-        InlineKeyboardButton(text="🎄 ᴀʙᴏᴜᴛ 🎄", callback_data="fallen_"),
+        InlineKeyboardButton(text="🥂 𝐔ᴘᴅᴀᴛᴇs 🥂", url=f"https://t.me/DevanshXBots"),
         InlineKeyboardButton(text="💸 sᴜᴩᴩᴏʀᴛ 💸", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
         InlineKeyboardButton(text="🍁 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🍁", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="🥂 sᴏᴜʀᴄᴇ 🥂", callback_data="source_"),
-    ],
-    [
-        InlineKeyboardButton(text="❄️ ᴍᴜsɪᴄ ❄️", callback_data="Music_"),
     ],
 ]
 HELP_STRINGS = f"""
@@ -343,114 +340,6 @@ def help_button(update, context):
     except BadRequest:
         pass
 
-
-def Fallen_about_callback(update: Update, context: CallbackContext):
-    query = update.callback_query
-    if query.data == "fallen_":
-        uptime = get_readable_time((time.time() - StartTime))
-        query.message.edit_text(
-            text=f"*ʜᴇʏ,*🥂\n  *ᴛʜɪs ɪs {BOT_NAME}*"
-            "\n*ᴀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ sᴛʀᴇᴀᴍ ʟᴀɢғʀᴇᴇ ᴍᴜsɪᴄ ᴏɴ ᴠᴄ.*"
-            "\n*ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ.*"
-
-            f"\n\n➟ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʙᴀsɪᴄ ʜᴇʟᴩ ᴀɴᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ {BOT_NAME}.",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", callback_data="fallen_support"
-                        ),
-                        InlineKeyboardButton(
-                            text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
-                        ),
-                        InlineKeyboardButton(
-                            text="sᴏᴜʀᴄᴇ",
-                            callback_data="source_",
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(text="⇠", callback_data="fallen_back"),
-                    ],
-                ]
-            ),
-        )
-    elif query.data == "fallen_support":
-        query.message.edit_text(
-            text="*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴩ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍᴇ.*"
-            f"\n\nɪғ ʏᴏᴜ ғᴏᴜɴᴅ ᴀɴʏ ʙᴜɢ ɪɴ {BOT_NAME} ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ɢɪᴠᴇ ғᴇᴇᴅʙᴀᴄᴋ ᴀʙᴏᴜᴛ ᴛʜᴇ {BOT_NAME}, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ.",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
-                        ),
-                        InlineKeyboardButton(
-                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/DevanshXBots"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
-                        ),
-                        InlineKeyboardButton(
-                            text="ɢɪᴛʜᴜʙ",
-                            url="https://github.com/Devansh-Bots",
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(text="⇠", callback_data="fallen_"),
-                    ],
-                ]
-            ),
-        )
-    elif query.data == "fallen_back":
-        first_name = update.effective_user.first_name
-        query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-            disable_web_page_preview=True,
-        )
-
-
-def Source_about_callback(update: Update, context: CallbackContext):
-    query = update.callback_query
-    if query.data == "source_":
-        query.message.edit_text(
-            text=f"""
-*ʜᴇʟʟᴏ ᴛʜᴇʀᴇ!,
- ᴛʜɪs ɪs {BOT_NAME},
-ᴀ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ ʙᴏᴛ.*
-*ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ɪsɴ'ᴛ ᴘᴜʙʟɪᴄ ʙᴜᴛ ʏᴏᴜ ᴍᴀʏ ᴀsᴋ ғᴏʀ ɪᴛ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ ᴍᴇ :* [ᴅᴇᴠᴀɴsʜ](https://t.me/DamnDevansh)
-
-{BOT_NAME} ᴍᴀᴅᴇ ᴡɪᴛʜ ♥︎ ʙʏ [ᴅᴇᴠᴀɴsʜxʙᴏᴛs](https://t.me/DevanshXBots)
-© 2022 - 2023 | [ᴅᴇᴠᴀɴsʜxʙᴏᴛᴄʜᴀᴛs](https://t.me/DevanshXBotChats), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
-""",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="⇠", callback_data="source_back")]]
-            ),
-        )
-    elif query.data == "source_back":
-        first_name = update.effective_user.first_name
-        query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-            disable_web_page_preview=True,
-        )
-
 def Music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "Music_":
@@ -477,11 +366,22 @@ def Music_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="fallen_")
+                        InlineKeyboardButton(text="◁", callback_data="fallen_back")
                     ],
                 ]
             ),
         )
+    elif query.data == "fallen_back":
+        first_name = update.effective_user.first_name
+        query.message.edit_text(
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=True,
+        )
+
+    
     elif query.data == "Music_admin":
         query.message.edit_text(text=f"*» ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ «*"
             f"""
@@ -504,7 +404,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data="Music_"),InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="fallen_support")
+                        InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data="Music_"),InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}")
                     ]
                 ]
             ),
@@ -530,7 +430,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="Music_"),InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="fallen_support")
+                        InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="Music_"),InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}")
                     ]
                 ]
             ),
@@ -557,7 +457,7 @@ c ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data="Music_"),InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="fallen_support")
+                        InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data="Music_"),InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}")
                     ]
                 ]
             ),
@@ -577,7 +477,7 @@ c ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data="Music_"),InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="fallen_support")
+                        InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data="Music_"),InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}")
                     ]
                 ]
             ),
@@ -842,12 +742,12 @@ def main():
                 caption=f"""
 ㅤ🍁 {BOT_NAME} ɪs ᴀʟɪᴠᴇ ᴋɪᴅ...
 
-┏──────◈◆◈◆◈──────┓
+┏─────◈◆◈◆◈─────┓
 ㅤ➥ **ᴘʏᴛʜᴏɴ :** `{y()}`
 ㅤ➥ **ʟɪʙʀᴀʀʏ :** `{telever}`
 ㅤ➥ **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
 ㅤ➥ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
-┗──────◈◆◈◆◈──────┛""",
+┗─────◈◆◈◆◈─────┛""",
                 parse_mode=ParseMode.MARKDOWN,
             )
         except Unauthorized:
@@ -869,13 +769,6 @@ def main():
         settings_button, pattern=r"stngs_", run_async=True
     )
 
-    about_callback_handler = CallbackQueryHandler(
-        Fallen_about_callback, pattern=r"fallen_", run_async=True
-    )
-    source_callback_handler = CallbackQueryHandler(
-        Source_about_callback, pattern=r"source_", run_async=True
-    )
-
     Music_callback_handler = CallbackQueryHandler(
         Music_about_callback, pattern=r"Music_", run_async=True
     )
@@ -884,8 +777,6 @@ def main():
 
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(help_handler)
-    dispatcher.add_handler(about_callback_handler)
-    dispatcher.add_handler(source_callback_handler)
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(settings_callback_handler)
