@@ -366,12 +366,12 @@ def Music_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="fallen_back")
+                        InlineKeyboardButton(text="◁", callback_data="Music_back")
                     ],
                 ]
             ),
         )
-    elif query.data == "fallen_back":
+    elif query.data == "Music_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
